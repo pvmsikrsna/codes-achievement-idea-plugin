@@ -35,6 +35,7 @@
 
   <actions>
     <!-- Add your actions here -->
+      <action id="Demo" class="codes.achievement.plugin.idea.DemoAction" text="DemoAction" description="just for demo"/>
   </actions>
 
 </idea-plugin>
