@@ -1,8 +1,8 @@
 <idea-plugin version="2">
-  <id>codes.achievement.plugin.idea</id>
-  <name>Codes Achievement Plugin</name>
+  <id>com.yourcompany.unique.plugin.id</id>
+  <name>Plugin display name here</name>
   <version>1.0</version>
-  <vendor email="mail@dozer.cc" url="http://www.dozer.cc">Dozer</vendor>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
   <description><![CDATA[
       Enter short description for your plugin here.<br>
