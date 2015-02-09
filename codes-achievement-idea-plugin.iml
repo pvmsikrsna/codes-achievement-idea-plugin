@@ -9,6 +9,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="com.google.guava:guava:14.0.1" level="project" />
+    <orderEntry type="library" name="com.squareup:tape:1.2.3" level="project" />
+    <orderEntry type="library" name="com.google.code.gson:gson:2.3.1" level="project" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">

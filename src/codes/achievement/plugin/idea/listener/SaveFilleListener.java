@@ -22,7 +22,6 @@ public class SaveFilleListener implements Listener {
                 new FileDocumentManagerAdapter() {
                     @Override
                     public void fileContentLoaded(VirtualFile file, Document document) {
-                        
                     }
                 });
     }
