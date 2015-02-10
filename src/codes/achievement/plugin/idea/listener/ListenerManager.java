@@ -9,6 +9,7 @@ public class ListenerManager {
     public static void loadListeners() {
         try {
             new OpenFilleListener().register();
+            new OperatingSystemListener().register();
         } catch (Exception exp) {
             exp.printStackTrace();
         }
