@@ -26,7 +26,6 @@ public class OpenFilleListener implements Listener {
             public void fileOpened(FileEditorManager source, VirtualFile file) {
                 String extension = Strings.isNullOrEmpty(file.getExtension()) ? "unknow" : file.getExtension();
                 EventQueue.getCurrent().add(new EventDto("open-file-" + extension));
-                System.out.println(EventQueue.getCurrent().size());
             }
 
             @Override
