@@ -8,7 +8,25 @@ import java.util.Date;
  * http://www.dozer.cc
  */
 public class EventDto {
-    private String ide;
-    private String name;
-    private Date time;
+    private final String ide;
+    private final String name;
+    private final Date time;
+
+    public EventDto(String name) {
+        this.ide = "idea";
+        this.name = name;
+        this.time = new Date();
+    }
+
+    public String getIde() {
+        return ide;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Date getTime() {
+        return time;
+    }
 }
