@@ -9,7 +9,6 @@ public class ListenerManager {
     public static void loadListeners() {
         try {
             new OpenFilleListener().register();
-            new InstallPluginListener().register();
         } catch (Exception exp) {
             exp.printStackTrace();
         }
