@@ -13,30 +13,55 @@ import java.io.*;
  * http://www.dozer.cc
  */
 public class EventQueue implements ObjectQueue<EventDto> {
+    private static EventQueue current;
+
+    private final ObjectQueue<EventDto> inner;
+
+    public static ObjectQueue<EventDto> getCurrent() {
+        if (current == null) {
+            synchronized (EventQueue.class) {
+                if (current == null) {
+                    current = new EventQueue();
+                }
+            }
+        }
+        return current;
+    }
+
+    private EventQueue() {
+        ObjectQueue<EventDto> temp = null;
+        try {
+            temp = new FileObjectQueue<>(new File("codes-achievement-idea-event-queue"), new GsonConverter());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        inner = temp;
+    }
+
 
     @Override
     public int size() {
-        return 0;
+        return inner.size();
     }
 
     @Override
     public void add(EventDto entry) {
-
+        inner.add(entry);
     }
 
     @Override
     public EventDto peek() {
-        return null;
+        return inner.peek();
     }
 
     @Override
     public void remove() {
-
+        inner.remove();
     }
 
     @Override
     public void setListener(Listener<EventDto> listener) {
-
+        inner.setListener(listener);
     }
 
 

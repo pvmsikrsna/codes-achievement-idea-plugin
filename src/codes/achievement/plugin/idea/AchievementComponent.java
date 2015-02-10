@@ -1,7 +1,11 @@
 package codes.achievement.plugin.idea;
 
+import codes.achievement.plugin.idea.dto.EventDto;
 import codes.achievement.plugin.idea.listener.ListenerManager;
+import codes.achievement.plugin.idea.storage.EventQueue;
 import org.jetbrains.annotations.NotNull;
+
+import java.io.IOException;
 
 /**
  * Dozer @ 2015-02

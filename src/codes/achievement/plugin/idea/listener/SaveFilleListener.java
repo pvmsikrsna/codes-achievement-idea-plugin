@@ -1,5 +1,7 @@
 package codes.achievement.plugin.idea.listener;
 
+import codes.achievement.plugin.idea.dto.EventDto;
+import codes.achievement.plugin.idea.storage.EventQueue;
 import com.intellij.AppTopics;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.Document;
@@ -22,6 +24,8 @@ public class SaveFilleListener implements Listener {
                 new FileDocumentManagerAdapter() {
                     @Override
                     public void fileContentLoaded(VirtualFile file, Document document) {
+                        EventQueue.getCurrent().add(new EventDto());
+                        System.out.println(EventQueue.getCurrent().size());
                     }
                 });
     }
