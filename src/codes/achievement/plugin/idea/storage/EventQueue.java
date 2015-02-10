@@ -31,7 +31,10 @@ public class EventQueue implements ObjectQueue<EventDto> {
     private EventQueue() {
         ObjectQueue<EventDto> temp = null;
         try {
-            temp = new FileObjectQueue<>(new File("codes-achievement-idea-event-queue"), new GsonConverter());
+
+            String basePath = System.getProperty("idea.config.path");
+            String separator = System.getProperty("file.separator");
+            temp = new FileObjectQueue<>(new File(String.format("%s%s%s", basePath, separator, "codes-achievement-idea-event-queue")), new GsonConverter());
         } catch (IOException e) {
             e.printStackTrace();
         }
